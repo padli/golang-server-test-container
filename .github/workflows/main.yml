@@ -39,6 +39,6 @@ jobs :
                 port : ${{secrets.SERVER_PORT}}   
                 script :
                     whoami
-                    docker stop serene_northcutt || true && docker rm serene_northcutt || true
+                    docker stop golang-server || true && docker rm golang-server || true
                     docker pull ${{vars.IMAGE_NAME}}
                     docker run -d -p 8000:8080 ${{vars.CONTAINER_NAME}} ${{vars.IMAGE_NAME}}        
