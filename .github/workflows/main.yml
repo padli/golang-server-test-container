@@ -35,7 +35,7 @@ jobs :
               with :
                 host : ${{secrets.SERVER}}
                 username : ${{secrets.SERVER_USERNAME}}
-                key: ${{ secrets.SSH_PRIVATE_KEY }}
+                key: ${{secrets.SSH_PRIVATE_KEY}}
                 port : ${{secrets.SERVER_PORT}}   
                 script :
                     whoami
