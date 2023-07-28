@@ -27,7 +27,7 @@ jobs :
                 tags: ${{secrets.DOCKER_USERNAME}}/golang-server:latest
     deployment :
         needs : build
-        environment : staging
+        environment : main
         runs-on : ubuntu-latest
         steps :
             - name : Deploy to VPS
